@@ -39,6 +39,7 @@ class AppsListRepository(
                         gmsPackages.contains(it.packageName)
                                 && it.packageName.contains("com.google")
                                 || it.packageName.contains("com.android.vending")
+                                || it.packageName == "com.google.android.apps.nexuslauncher"
                     }
                     .map { createAppInfo(pm, it) }
                     .sortedBy { it.appName }
